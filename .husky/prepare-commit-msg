@@ -1,4 +1,7 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-exec < /dev/tty && npx cz --hook || true
+# Run commitizen hook only when installed locally.
+if [ -x "./node_modules/.bin/cz" ]; then
+	exec < /dev/tty && ./node_modules/.bin/cz --hook || true
+fi

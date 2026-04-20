@@ -4,7 +4,8 @@ export default function Home() {
   const name = 'Monalisa';
   return (
     <div>
-      <h1>HEllo, Monalisaaa</h1>
+      <h1>HEllo, Monalisaaa </h1>
+      <p>{name}</p>
     </div>
   );
 }
