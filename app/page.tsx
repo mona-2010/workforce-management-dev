@@ -6,6 +6,11 @@ export default function Home() {
     <div>
       <h1 className="text-blue-400">Hello, Monaaaa </h1>
       <p>{name}</p>
+      <p>{name}</p>
+      <p>{name}</p>
+      <p>{name}</p>
+      <p>{name}</p>
+      <p>{name}</p>
     </div>
   );
 }
