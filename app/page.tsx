@@ -1,16 +1,15 @@
-import Image from 'next/image';
+import { createClient } from '@/utils/supabase/server'
+import { cookies } from 'next/headers'
 
-export default function Home() {
-  const name = 'Mona';
+export default async function Page() {
+  const cookieStore = await cookies()
+  const supabase = createClient(cookieStore)
+
+  console.log(supabase)
+
   return (
-    <div>
-      <h1 className="text-blue-400">Hello, Monaaaa </h1>
-      <p>{name}</p>
-      <p>{name}</p>
-      <p>{name}</p>
-      <p>{name}</p>
-      <p>{name}</p>
-      <p>{name}</p>
-    </div>
-  );
+    <ul>
+      hey
+    </ul>
+  )
 }
